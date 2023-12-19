@@ -1,0 +1,328 @@
+body{
+  background: linear-gradient(to bottom, #000000, #333333);
+  background-repeat: no-repeat;
+  background-size: cover; 
+  padding-bottom: 30px;
+  min-height: 100vh;
+  color: rgba(255, 255, 255, 0.895);
+}
+#imagePreviewContainer {
+    display: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  #imagePreview {
+    transition: transform 0.5s ease; /* Add a smooth transition effect */
+  }
+.top_bar{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 4px 8px rgb(0, 0, 0, 0.1);
+}
+
+.nav_btn{
+  padding: 5px 10px;
+  background-color:inherit;
+  color: white;
+  border: none;
+  overflow: hidden;
+  font-size: 25px;
+}
+.nav_btn:hover{
+  color: rgb(0, 157, 255);
+}
+.nav_btn:active{
+  color: rgb(21, 0, 255);
+
+}
+form{
+  padding-top: 10px;
+}
+
+form label{
+  padding-left: 10px;
+  padding-bottom: 5px;
+}
+#imageInput{
+  border: none;
+  background: none; display: flex;
+  justify-content: center;
+}
+.imageInput_wrapper{
+  border: none;
+  padding-top: 10px;
+  background: none;
+  display: flex;
+  justify-content: center;
+}
+input.choose-img{
+  background-color: black;
+}
+.img_bar{
+  color: white;
+}
+.rotate-img{
+    width: 32px;
+    filter: brightness(0) invert(1);
+
+}
+.slider {
+  margin-top: 20px;
+}
+.image-container {
+  filter: sepia(20%) hue-rotate(30deg); /* Adjust the values as needed */
+}
+.img-upload_ .form-wrapper{
+  display: flex;
+  justify-content: center;
+}
+.preview-img{
+  max-height: 90vh;
+  max-width: 100%;
+}
+@media(max-width: 700px){
+  .preview-img{
+    max-height: 75vh;
+  }
+}
+.filter {
+  display: none;
+  color: white;
+}
+.filter_bar{
+  max-height: 100vh;
+  overflow-y:scroll;
+  padding-bottom: 50px;
+  
+}
+
+.filter-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.filter.show-section{
+  display: block;
+}
+.filter .title{
+  font-size: 40px;
+}
+.rotate .title{
+  font-size: 40px;
+}
+.crop-container {
+  display: none;
+  color: white;
+}
+
+.crop-container.show-section {
+  display: block !important;
+}
+.rotate{
+  display: none;
+  color: white;
+}
+.rotate.show-section{
+  display: block;
+}
+.value {
+  font-weight: bold;
+}
+
+
+#modalBody img {
+  max-width: 100%; /* Set maximum width to 100% of the container */
+  height: auto;    /* Maintain the aspect ratio */
+  display: block;  /* Ensure the image is treated as a block element */
+  margin: 0 auto;  /* Center the image horizontally */
+}
+
+
+#reset{
+  width: 100px;
+  color: white;
+}
+.save_wrapper{
+  display: contents;
+}
+.rest_wrapper{
+  display: contents;
+}
+.btn-danger{
+  width: 100px;
+  display: inline-block;
+}
+.reset_save_controls{
+  padding-top: 30px;
+}
+.update_crop{
+  padding-top: 20px;
+}
+
+.rotate_left{
+ position: relative;
+ padding: 20px 10px;
+}
+.rotate_btns{
+  background-color: transparent;
+  border: none;
+  text-align: end;
+  cursor: pointer;
+}
+.rotate_btns:hover{
+  opacity: 0.8;
+}
+.rotate_title{
+  display: inline-block;
+  position: relative;
+}
+.crop-container label.title{
+  font-size: 40px;
+  display: block;
+  padding-bottom: 30px;
+}
+label.select_label_crop {
+  font-size: 20px;
+}
+.rotate_title h5{
+  font-weight: 100;
+  font-size: 25px;
+}
+.btn_rt{
+  display: inline-block;
+  text-align: end;
+  position: absolute;
+  right: 20px ;
+}
+.options{
+  padding-top: 50px;
+}
+.container{
+  position: relative;
+}
+.slider p{
+  font-weight: 100;
+  font-size: 20px;
+}
+
+@media(max-width:425px){
+  .top_bar{
+    gap: 20px
+  }
+  .options{
+    padding-top: 20px;
+  }
+  .crop-container label.title{
+    padding-bottom: 15px;
+  }
+  .editor-panel{
+    padding-top: 20px;
+  }
+}
+
+
+
+/*FOR SELECT CUSTOM*/
+.select-wrapper {
+  position: relative;
+  user-select: none;
+  width: 100%;
+}
+.select {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.select__trigger {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 21px;
+  font-size: 17px;
+  height: 42px;
+  line-height: 1.24;
+  color: #000000c7;
+  background-color: #fff;
+  border: 1px solid #dddfe2;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.custom-options {
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border: 1px solid #dddfe2;
+  border-top: 0;
+  background: #ffffff;
+  color: black;
+  transition: all 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 3;
+  max-height: 250px; /* Set the maximum height for the options */
+  overflow-y: auto; /* Enable vertical scroll if needed */
+}
+.select.open .custom-options {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+.custom-option {
+  position: relative;
+  display: block;
+  padding: 0 22px 0 22px;
+  font-size: 17px;
+  font-weight: 400;
+  color: #000000;
+  line-height: 40px;
+  cursor: pointer;
+  transition:  ease-in-out;
+}
+.custom-option:hover {
+  cursor: pointer;
+  background-color: #000000;
+  color: white;
+}
+.custom-option.selected {
+  color: #ffffff;
+  background-color: rgb(16, 16, 16);}
+.arrow1 {
+  position: relative;
+  height: 10px;
+  width: 10px;
+}
+.arrow1::before, .arrow1::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  width: 0.15rem;
+  height: 100%;
+  transition: all 0.5s;
+}
+.arrow1::before {
+  left: -5px;
+  transform: rotate(45deg);
+  background-color: #161616cc;
+}
+.arrow1::after {
+  left: 1px;
+  transform: rotate(-45deg);
+  background-color: #161616cc;
+}
+.open .arrow1::before {
+  left: -2px;
+  transform: rotate(-45deg);
+}
+.open .arrow1::after {
+  left: 5px;
+  transform: rotate(45deg);
+}
