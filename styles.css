@@ -9,6 +9,8 @@ body{
 #imagePreviewContainer {
     display: none;
     text-align: center;
+  justify-content: center;
+    align-items: center;
   }
   #imagePreview {
     transition: transform 0.5s ease; /* Add a smooth transition effect */
@@ -49,6 +51,10 @@ form label{
 #imageInput{
   border: none;
   background: none; display: flex;
+  justify-content: center;
+}
+.img-upload_ .form-wrapper{
+  display: flex;
   justify-content: center;
 }
 .imageInput_wrapper{
