@@ -68,7 +68,7 @@ const imageInput = document.getElementById('imageInput');
         const reader = new FileReader();
         reader.onload = function (e) {
           imagePreview.src = e.target.result;
-          imagePreviewContainer.style.display = 'block';
+          imagePreviewContainer.style.display = 'flex';
         };
         reader.readAsDataURL(file);
       } else {
